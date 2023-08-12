@@ -18,9 +18,14 @@
    
    * Unidade 04 : Estruturas de Dados
 
+   * [Atividade 01](/Modulo-1.Programação%20em%20Linguagem%20Python%20para%20Machine%20Learning/Atividade/Atividade.ipynb)
 2. [Módulo-2.Visualização e análise de dados](/Modulo-2.Visualização%20e%20análise%20de%20dados/)
    
-   * Unidade 1 - Visualização de dados com a biblioteca matplotlib
+   * Unidade 01 : Visualização de dados com a biblioteca matplotlib
+
+   * Unidade 02 : Análise de dados com a biblioteca pandas
+
+   * [Atividade 02 - Visualização e análise de dados](/Modulo-2.Visualização%20e%20análise%20de%20dados/Atividade/Atividade.ipynb)
 
 3. [Módulo-3.Visão Computacional]()
 
