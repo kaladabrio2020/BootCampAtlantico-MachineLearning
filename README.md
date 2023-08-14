@@ -28,5 +28,6 @@
    * [Atividade 02 - Visualização e análise de dados](/Modulo-2.Visualização%20e%20análise%20de%20dados/Atividade/Atividade.ipynb)
 
 3. [Módulo-3.Visão Computacional](/Modulo-3.Visão%20Computacional/)
+   * Unidade 01 : Pré-processamento em base dados
 
 #### _Disponibilidade dos arquivos no final_
