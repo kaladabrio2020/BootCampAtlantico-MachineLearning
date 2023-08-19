@@ -29,7 +29,7 @@
 
 3. [Módulo-3.Visão Computacional](/Modulo-3.Visão%20Computacional/)
    * Unidade 01 : Pré-processamento em base dados
-   * Unidade 02 : Pré-processamento de imagens
+   * [Unidade 02 : Pré-processamento de imagens](/Modulo-3.Visão%20Computacional/Pre-processamento%20de%20imagens/)
    * [Trabalho]
 
 #### _Disponibilidade dos arquivos no final_
