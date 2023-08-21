@@ -32,4 +32,7 @@
    * [Unidade 02 : Pré-processamento de imagens](/Modulo-3.Visão%20Computacional/Pre-processamento%20de%20imagens/)
    * [Trabalho](https://github.com/Bootcamp-Atlantico-Machine-Learning)
 
-#### _Disponibilidade dos arquivos no final_
+
+
+
+#### [Notas das avaliações](/Images/HistoricoNotas/NotaDasAvaliações.png)
