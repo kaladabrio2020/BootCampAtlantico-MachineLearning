@@ -4,7 +4,7 @@
 
 # BootCamp Atlântico
 
-> BootCamp atlântico de machine learning 
+> BootCamp atlântico de machine learning 2023.2 
 
 ## Modulos
 
