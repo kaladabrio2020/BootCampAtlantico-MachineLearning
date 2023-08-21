@@ -30,6 +30,6 @@
 3. [Módulo-3.Visão Computacional](/Modulo-3.Visão%20Computacional/)
    * Unidade 01 : Pré-processamento em base dados
    * [Unidade 02 : Pré-processamento de imagens](/Modulo-3.Visão%20Computacional/Pre-processamento%20de%20imagens/)
-   * [Trabalho em equipe](https://github.com/Bootcamp-Atlantico-Machine-Learning)
+   * [Trabalho](https://github.com/Bootcamp-Atlantico-Machine-Learning)
 
 #### _Disponibilidade dos arquivos no final_

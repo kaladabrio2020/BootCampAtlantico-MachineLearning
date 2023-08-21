@@ -181,6 +181,10 @@ plt.show()
 
 ```
 
+&nbsp;
+
+
+
 ### 
 
 ### Imagens e suas propriedades
