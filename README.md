@@ -1,5 +1,5 @@
 <div align='center'>
-    <img src="Images/Atlantico.png">
+    <img src="Imagens/Atlantico.png">
 </div>
 
 # BootCamp Atlântico
@@ -35,4 +35,4 @@
 
 
 
-#### [Notas das avaliações](/Images/HistoricoNotas/NotaDasAvaliações.png)
+#### [Notas das avaliações](/Imagens/HistoricoNotas/NotaDasAvaliações.png)
