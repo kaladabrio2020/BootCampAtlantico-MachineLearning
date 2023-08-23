@@ -140,17 +140,17 @@ plt.show()
 
 &nbsp;
 
-8. **cv2.calcHist** = usada para calcular o histograma de uma imagem. O histograma é uma representação estatística da distribuição de intensidades dos pixels em uma imagem, ou seja, mostra quantos pixels têm valores de intensidade em cada intervalo. Isso é útil para análise de imagem, processamento de imagem e várias tarefas de visão computacional.
+8. **cv2.calcHist** = usada para calcular o histograma de uma imagem. O histograma é uma representação estatística da distribuição de intensidades dos pixels em uma imagem, ou seja, mostra quantos pixels têm valores de intensidade em cada intervalo.
    
-   * **images**: Uma lista de imagens de entrada para as quais você deseja calcular o histograma. Normalmente, é uma única imagem.
+   * `images`: Uma lista de imagens de entrada para as quais você deseja calcular o histograma. Normalmente, é uma única imagem.
    
-   * **channels**: A lista de índices de canais para os quais você deseja calcular o histograma. Por exemplo, para uma imagem colorida BGR, use `[0]` para o canal azul, `[1]` para o canal verde e `[2]` para o canal vermelho.
+   * `channels`: A lista de índices de canais para os quais você deseja calcular o histograma. Por exemplo, para uma imagem colorida BGR, use `[0]` para o canal azul, `[1]` para o canal verde e `[2]` para o canal vermelho.
    
-   * **mask**: Uma máscara opcional que define quais pixels serão incluídos no cálculo do histograma. Pixels correspondentes à máscara em branco serão ignorados.
+   * `mask`: Uma máscara opcional que define quais pixels serão incluídos no cálculo do histograma. Pixels correspondentes à máscara em branco serão ignorados.
    
-   * **histSize**: O número de intervalos (bins) no histograma. Geralmente, é uma lista contendo o número de intervalos para cada canal.
+   * `histSize`: O número de intervalos (bins) no histograma. Geralmente, é uma lista contendo o número de intervalos para cada canal.
    
-   * **ranges**: O intervalo de valores para cada intervalo. Normalmente, é `[0, 256]` para um intervalo de intensidade de pixel de 0 a 255.
+   * `ranges`: O intervalo de valores para cada intervalo. Normalmente, é `[0, 256]` para um intervalo de intensidade de pixel de 0 a 255.
 
 ```python
 imagemZero = cv2.imread('imagens/img-passaro/pexels-roshan-kamath-1661179.jpg',cv2.IMREAD_GRAYSCALE)
@@ -178,14 +178,73 @@ plt.plot(histhistimage)
 
 
 plt.show()
-
 ```
 
 &nbsp;
 
+9. **cv2.Sobel** = é uma técnica de processamento de imagens usada para calcular gradientes de intensidade em uma imagem. Ele é frequentemente usado para detecção de bordas e realce de características nas imagens.
+   
+   * `src`: Obrigatório. A imagem de entrada na qual você deseja calcular as derivadas de Sobel.
+   
+   * `ddepth`: Opcional. A profundidade da imagem de saída. Deve ser um valor inteiro, como `-1` (usado para manter a mesma profundidade da imagem de entrada) ou `cv2.CV_64F` (para usar uma imagem de ponto flutuante).
+   
+   * `dx`: Ordem da derivada em relação ao eixo x (horizontal).  Pode ser `0`, `1` ou `2`.
+   
+   * `dy`: Ordem da derivada em relação ao eixo y (vertical).    Pode ser `0`, `1` ou `2`.
+   
+   * `ksize`: Opcional. O tamanho do kernel usado para o cálculo do gradiente. Deve ser um número ímpar, como `1`, `3`, `5`, etc.
+   
+   * `scale`: Opcional. Um fator de escala aplicado ao resultado da derivada. Pode ser útil para evitar a ampliação de valores após o cálculo.
+   
+   * `delta`: Opcional. Um valor adicionado ao resultado após a aplicação do fator de escala.
 
+10. **cv2.Canny** = é usada para aplicar o operador Canny para detecção de bordas em uma imagem. Ela ajuda a identificar as bordas dos objetos presentes na imagem, destacando as mudanças abruptas de intensidade.
+    
+    * `image`: Obrigatório. A imagem de entrada na qual você deseja detectar as bordas.
+    
+    * `threshold1`: Obrigatório. O primeiro limiar para a histerese. Pixels com gradientes maiores que este valor serão considerados bordas fortes.
+    
+    * `threshold2`: Obrigatório. O segundo limiar para a histerese. Pixels com gradientes entre `threshold1` e `threshold2` serão considerados bordas fracas, a menos que estejam conectados a pixels de borda fortes.
+    
+    * `apertureSize`: Opcional. O tamanho da abertura para calcular os gradientes. Deve ser um valor ímpar, geralmente `3`, `5` ou `7`.
+    
+    * `L2gradient`: Opcional. Um booleano que indica se deve ser usada a norma L2 para calcular os gradientes. Se for `True`, a norma L2 será usada, o que pode fornecer resultados mais precisos. Caso contrário, será usada a norma L1.
 
-### 
+```python
+path   = cv2.imread('imagens/img-numbers/pexels-magda-ehlers-1339865.jpg',cv2.IMREAD_GRAYSCALE)
+sobelx = cv2.Sobel(path,cv2.CV_64F,1,0,ksize=5)
+sobelY = cv2.Sobel(path,cv2.CV_64F,0,1,ksize=5)
+
+imageGray = np.sqrt(sobelx**2 + sobelY**2)
+
+plt.imshow(imageGray,cmap='gray')
+plt.show()
+
+# Carregar uma imagem em escala de cinza
+image = cv2.imread('imagem.jpg', cv2.IMREAD_GRAYSCALE)
+
+# Aplicar o operador Canny para detecção de bordas
+threshold1 = 100
+threshold2 = 200
+edges = cv2.Canny(image, threshold1, threshold2)
+
+# Exibir as bordas detectadas
+cv2.imshow('Bordas Detectadas', edges)
+```
+
+&nbsp;
+
+11. **cv2.createCLAHE** = é um método de processamento de imagens que melhora o contraste local em regiões da imagem, evitando a amplificação de ruído.
+    
+    * `clipLimit`: Obrigatório. O limite de recorte que controla a amplificação do contraste. Valores maiores resultam em mais amplificação, mas podem introduzir artefatos. Geralmente, um valor entre 2 e 4 é usado.
+    
+    * `tileGridSize`: Obrigatório. O tamanho dos blocos nos quais a imagem é dividida. Deve ser uma tupla de dois valores `(width, height)`.
+    
+    * `Preprocess`: Opcional. Define se algum pré-processamento será aplicado à imagem antes de realizar a equalização. Pode ser `0` para nenhuma alteração ou `cv2.CV_CLAHE_NORMALIZE` para normalização
+
+```python
+
+```
 
 ### Imagens e suas propriedades
 
