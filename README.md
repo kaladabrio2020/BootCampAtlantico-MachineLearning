@@ -29,7 +29,8 @@
 
 3. [Módulo-3.Visão Computacional](/Modulo-3.Visão%20Computacional/)
    * Unidade 01 : Pré-processamento em base dados
-   * [Unidade 02 : Pré-processamento de imagens](/Modulo-3.Visão%20Computacional/Pre-processamento%20de%20imagens/)
+   * [Unidade 02 : Pré-processamento de imagens](/Modulo-3.Visão%20Computacional/Unidade02.Pre-processamento%20de%20imagens/)
+   * [Unidade 03 : Introdução a Redes Neurais Convolucionais](/Modulo-3.Visão%20Computacional/Unidade03.Introdução%20a%20Redes%20Neurais%20Convolucionais/)
    * [Trabalho](https://github.com/Bootcamp-Atlantico-Machine-Learning)
 
 
