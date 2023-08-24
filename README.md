@@ -34,8 +34,10 @@
    * [Trabalho](https://github.com/Bootcamp-Atlantico-Machine-Learning)
 
 
-
+&nbsp;
 
 #### [Notas das avaliações](/Imagens/HistoricoNotas/NotaDasAvaliações.png)
 
-#### Trabalho
+#### [Nota do trabalho]()
+
+#### [Organização](https://github.com/Bootcamp-Atlantico-Machine-Learning)
