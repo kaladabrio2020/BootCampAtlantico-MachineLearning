@@ -24,7 +24,7 @@ import cv2
    
    &nbsp;
 
-2. **cv2.cvtColor** = 
+2. **cv2.cvtColor** 
    
    * **src**: Obrigatório. A imagem de entrada que você deseja converter.
    
@@ -52,6 +52,8 @@ plt.imshow(imagem)
 plt.show()
 ```
 
+&nbsp;
+
 3. **cv2.spit** = Essa função é usada para separar uma imagem em seus canais individuais.
 
 ```python
@@ -71,7 +73,7 @@ plt.show()
 
 &nbsp;
 
-4. **cv2.resize**
+4. **cv2.resize** = tamanho
    
    * **src**: Obrigatório. A imagem de entrada que você deseja redimensionar.
    
@@ -198,7 +200,35 @@ plt.show()
    
    * `delta`: Opcional. Um valor adicionado ao resultado após a aplicação do fator de escala.
 
-10. **cv2.Canny** = é usada para aplicar o operador Canny para detecção de bordas em uma imagem. Ela ajuda a identificar as bordas dos objetos presentes na imagem, destacando as mudanças abruptas de intensidade.
+10. **cv2.createCLAHE** = é um método de processamento de imagens que melhora o contraste local em regiões da imagem, evitando a amplificação de ruído.
+    
+    * `clipLimit`: Obrigatório. O limite de recorte que controla a amplificação do contraste. Valores maiores resultam em mais amplificação, mas podem introduzir artefatos. Geralmente, um valor entre 2 e 4 é usado.
+    
+    * `tileGridSize`: Obrigatório. O tamanho dos blocos nos quais a imagem é dividida. Deve ser uma tupla de dois valores `(width, height)`.
+    
+    * `Preprocess`: Opcional. Define se algum pré-processamento será aplicado à imagem antes de realizar a equalização. Pode ser `0` para nenhuma alteração ou `cv2.CV_CLAHE_NORMALIZE` para normalização
+
+```python
+path  = cv2.imread('imagens/img-numbers/pexels-magda-ehlers-1339865.jpg',cv2.IMREAD_GRAYSCALE)
+
+image = cv2.blur(path,(100,140))
+
+clahe = cv2.createCLAHE(1,(9,9))
+imageCostra = clahe.apply(image)
+
+
+sobelx = cv2.Sobel(imageCostra,cv2.CV_64F,1,0,ksize=11)
+sobelY = cv2.Sobel(imageCostra,cv2.CV_64F,0,1,ksize=11)
+
+imageGray = np.sqrt(sobelx**2 + sobelY**2)
+
+plt.imshow(imageGray,cmap='gray')
+plt.show() 
+```
+
+&nbsp;
+
+11. **cv2.Canny** = é usada para aplicar o operador Canny para detecção de bordas em uma imagem. Ela ajuda a identificar as bordas dos objetos presentes na imagem, destacando as mudanças abruptas de intensidade.
     
     * `image`: Obrigatório. A imagem de entrada na qual você deseja detectar as bordas.
     
@@ -210,41 +240,9 @@ plt.show()
     
     * `L2gradient`: Opcional. Um booleano que indica se deve ser usada a norma L2 para calcular os gradientes. Se for `True`, a norma L2 será usada, o que pode fornecer resultados mais precisos. Caso contrário, será usada a norma L1.
 
-```python
-path   = cv2.imread('imagens/img-numbers/pexels-magda-ehlers-1339865.jpg',cv2.IMREAD_GRAYSCALE)
-sobelx = cv2.Sobel(path,cv2.CV_64F,1,0,ksize=5)
-sobelY = cv2.Sobel(path,cv2.CV_64F,0,1,ksize=5)
-
-imageGray = np.sqrt(sobelx**2 + sobelY**2)
-
-plt.imshow(imageGray,cmap='gray')
-plt.show()
-
-# Carregar uma imagem em escala de cinza
-image = cv2.imread('imagem.jpg', cv2.IMREAD_GRAYSCALE)
-
-# Aplicar o operador Canny para detecção de bordas
-threshold1 = 100
-threshold2 = 200
-edges = cv2.Canny(image, threshold1, threshold2)
-
-# Exibir as bordas detectadas
-cv2.imshow('Bordas Detectadas', edges)
-```
-
 &nbsp;
 
-11. **cv2.createCLAHE** = é um método de processamento de imagens que melhora o contraste local em regiões da imagem, evitando a amplificação de ruído.
-    
-    * `clipLimit`: Obrigatório. O limite de recorte que controla a amplificação do contraste. Valores maiores resultam em mais amplificação, mas podem introduzir artefatos. Geralmente, um valor entre 2 e 4 é usado.
-    
-    * `tileGridSize`: Obrigatório. O tamanho dos blocos nos quais a imagem é dividida. Deve ser uma tupla de dois valores `(width, height)`.
-    
-    * `Preprocess`: Opcional. Define se algum pré-processamento será aplicado à imagem antes de realizar a equalização. Pode ser `0` para nenhuma alteração ou `cv2.CV_CLAHE_NORMALIZE` para normalização
-
-```python
-
-```
+&nbsp;
 
 ### Imagens e suas propriedades
 
