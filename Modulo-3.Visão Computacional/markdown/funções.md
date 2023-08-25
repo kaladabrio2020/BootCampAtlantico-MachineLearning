@@ -54,7 +54,7 @@ plt.show()
 
 &nbsp;
 
-3. **cv2.spit** = Essa função é usada para separar uma imagem em seus canais individuais.
+3. **cv2.split** = Essa função é usada para separar uma imagem em seus canais individuais.
 
 ```python
 b, g, r = cv2.split(imagem)
