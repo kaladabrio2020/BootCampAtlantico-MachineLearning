@@ -36,8 +36,8 @@
 
 &nbsp;
 
-#### [Notas das avaliações](/Imagens/HistoricoNotas/NotaDasAvaliações.png)
+#### [Notas das avaliações](/Imagens/HistoricoNotas/Captura de tela 2023-09-25 193108.png)
 
-#### [Nota do trabalho - avaliação 3](/Imagens/HistoricoNotas/NotaDasAvaliações.png)
+#### [Nota do trabalho - avaliação 3](/Imagens/HistoricoNotas/Captura de tela 2023-09-25 193108.png)
 
 #### [Organização](https://github.com/Bootcamp-Atlantico-Machine-Learning)
