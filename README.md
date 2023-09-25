@@ -38,6 +38,6 @@
 
 #### [Notas das avaliações](/Imagens/HistoricoNotas/NotaDasAvaliações.png)
 
-#### [Nota do trabalho]()
+#### [Nota do trabalho - avaliação 3](/Imagens/HistoricoNotas/NotaDasAvaliações.png)
 
 #### [Organização](https://github.com/Bootcamp-Atlantico-Machine-Learning)
